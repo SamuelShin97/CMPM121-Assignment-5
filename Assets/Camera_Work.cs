@@ -7,6 +7,7 @@ public class Camera_Work : MonoBehaviour
     public GameObject room1_camera;
     public GameObject room2_camera;
     public GameObject room3_camera;
+    public bool in_room1 = false;
     public bool in_room2 = false;
     public bool in_room3 = false;
     
@@ -30,6 +31,7 @@ public class Camera_Work : MonoBehaviour
             room1_camera.SetActive(true);
             room2_camera.SetActive(false);
             room3_camera.SetActive(false);
+            in_room1 = true;
             in_room2 = false;
             in_room3 = false;
         }
@@ -39,6 +41,7 @@ public class Camera_Work : MonoBehaviour
             room1_camera.SetActive(false);
             room2_camera.SetActive(true);
             room3_camera.SetActive(false);
+            in_room1 = false;
             in_room2 = true;
             in_room3 = false;
         }
@@ -48,6 +51,7 @@ public class Camera_Work : MonoBehaviour
             room1_camera.SetActive(false);
             room2_camera.SetActive(false);
             room3_camera.SetActive(true);
+            in_room1 = false;
             in_room2 = false;
             in_room3 = true;
         }

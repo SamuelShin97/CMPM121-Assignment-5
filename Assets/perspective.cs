@@ -12,7 +12,18 @@ public class perspective : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Physics.IgnoreCollision(.GetComponent<Collider>(), GetComponent<Collider>());
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("wall"))
+        {
+            Debug.Log("collide with wall");
+            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        }
+
     }
 
     public void SetFirstPerson()

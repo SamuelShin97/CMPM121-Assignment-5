@@ -36,6 +36,11 @@ public class dr_who_angel_behavior : MonoBehaviour
                 }
                 //Debug.DrawRay(transform.position, direction, Color.green);
             }
+            else
+            {
+                Debug.Log("Object is visible2");
+                transform.position = transform.position;
+            }
         }
         else
         {
