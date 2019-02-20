@@ -10,11 +10,14 @@ public class Camera_Work : MonoBehaviour
     public bool in_room1 = false;
     public bool in_room2 = false;
     public bool in_room3 = false;
-    
+    public Animator anim;
+    public Animator anim2;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = anim.gameObject.GetComponent<Animator>();
+        anim2 = anim2.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,16 @@ public class Camera_Work : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("floor1"))
         {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("door_open"))
+            {
+                Debug.Log("close door");
+                anim.SetTrigger("close");
+            }
+            if (anim2.GetCurrentAnimatorStateInfo(0).IsName("door_open"))
+            {
+                Debug.Log("close door");
+                anim2.SetTrigger("close");
+            }
             Debug.Log("in room 1");
             room1_camera.SetActive(true);
             room2_camera.SetActive(false);
@@ -37,6 +50,16 @@ public class Camera_Work : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("floor2"))
         {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("door_open"))
+            {
+                Debug.Log("close door");
+                anim.SetTrigger("close");
+            }
+            if (anim2.GetCurrentAnimatorStateInfo(0).IsName("door_open"))
+            {
+                Debug.Log("close door");
+                anim2.SetTrigger("close");
+            }
             Debug.Log("in room 2");
             room1_camera.SetActive(false);
             room2_camera.SetActive(true);
@@ -47,6 +70,16 @@ public class Camera_Work : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("floor3"))
         {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("door_open"))
+            {
+                Debug.Log("close door");
+                anim.SetTrigger("close");
+            }
+            if (anim2.GetCurrentAnimatorStateInfo(0).IsName("door_open"))
+            {
+                Debug.Log("close door");
+                anim2.SetTrigger("close");
+            }
             Debug.Log("in room 3");
             room1_camera.SetActive(false);
             room2_camera.SetActive(false);

@@ -9,6 +9,12 @@ TagManager:
   - floor2
   - floor3
   - wall
+  - door
+  - door1
+  - door2
+  - collectable1
+  - collectable2
+  - enemy
   layers:
   - Default
   - TransparentFX

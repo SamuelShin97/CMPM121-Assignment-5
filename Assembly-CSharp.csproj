@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\behavior.cs" />
+    <Compile Include="Assets\bullet_checks.cs" />
     <Compile Include="Assets\Camera_Work.cs" />
     <Compile Include="Assets\collect.cs" />
     <Compile Include="Assets\dr_who_angel_behavior.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Assets\perspective.cs" />
     <Compile Include="Assets\rotate.cs" />
     <Compile Include="Assets\run.cs" />
+    <Compile Include="Assets\shoot.cs" />
     <Compile Include="Assets\track_player.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Samuel/Documents/CMPM121-Assignment-5/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

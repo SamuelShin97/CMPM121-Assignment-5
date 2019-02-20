@@ -21,7 +21,7 @@ public class dr_who_angel_behavior : MonoBehaviour
             Vector3 direction = Camera.main.transform.position - transform.position;
             if (Physics.Raycast(transform.position, direction, out hit))
             {
-                if (hit.collider.tag != "MainCamera") //hit something else before the camera
+                if (hit.collider.tag != "MainCamera" && hit.collider.tag != "Player") //hit something else before the camera
                 {
                     Debug.Log("Object is not visible");
                     transform.LookAt(player.transform.position);
@@ -34,7 +34,7 @@ public class dr_who_angel_behavior : MonoBehaviour
                     transform.position = transform.position;
                     
                 }
-                //Debug.DrawRay(transform.position, direction, Color.green);
+                Debug.DrawRay(transform.position, direction, Color.green);
             }
             else
             {
